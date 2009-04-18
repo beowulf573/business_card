@@ -18,9 +18,10 @@
 \def\Address {}
 \def\CityZip {}
 \def\Email   {lazarus@heorot.org}
-\def\TEL     {(281) 851-2417}
+\def\TEL     {281.851.2417}
 \def\FAX     {}
-\urldef{\WEB}\url{http://www.heorot.org}
+%\urldef{\WEB}\url{http://www.heorot.org}
+\def\WEB {http://www.heorot.org}
 \def\logo    {}
 \def\logosize {2.5in}
 % You can get the fingerprint by doing : 'pgp -kvc <userid>'
@@ -66,14 +67,14 @@
 \def\card{\begin{tabular}{c}
 
           \vspace{0.3in}\\
-          \hspace*{\lstart}{\Large\sc \Who}\vspace{0.05in}\\
+          \hspace*{\lstart}{\large\sc \Who}\vspace{0.05in}\\
           \hspace*{\lstart}{\small\sc \What}\vspace{0.05in}\\
           \rule[-2ex]{0ex}{2ex}
 
 %          \small%
-          \hspace*{\lstart}{\scriptsize \TEL}\\
-          \hspace*{\lstart}{\it\scriptsize\Email}\\
-          \hspace*{\lstart} {\scriptsize\WEB}\vspace{0.25in}\\
+          \hspace*{\lstart}{\scriptsize\TEL}\\
+          \hspace*{\lstart}{\scriptsize\Email}\\
+          \hspace*{\lstart}{\scriptsize\WEB}\vspace{0.25in}\\
 
           \hspace*{\lstart}{\textsf{\pgpfont \xpgpkeyA}}
 
