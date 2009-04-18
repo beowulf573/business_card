@@ -1,152 +1,93 @@
-%
-% Originally in http://www.debian.org/~jgg/card.tex
-%  Debian GNU/Linux developer business card template
-%
-%  This template is vaguely based on several similar ones I have
-%  found elsewhere on the web; it uses a LaTeX ``picture'' environment
-%  to position the text all around an individual card, and wraps that
-%  in a bigger ``picture'' which renders 10 cards on the page in a
-%  layout suitable for printing on Avery pre-punched business card
-%  stock.
-%
-%  The modified cut marks are aligned outside the actual card. When cutting
-%  this makes sure that there is no slight black line on the top or the
-%  bottom of the cards. The best way to cut them is using a cutting wheel
-%  [looks like a pizza cutter but is extrmely sharp] and a plastic pad. Use
-%  a rular to guide the cutter. Cut the three vertical divisions first, but 
-%  do not go past the top or bottom of the page. After that cut each card 
-%  horizontally. If you have a sharp cutter you can cut more than one sheet
-%  at once like this. The prefered type of paper is a heavy paper run through
-%  a laser in the `straight through' path [usually in the manual feed and
-%  out the face up tray on the back]
+% bus_card.tex, Brian Moses [moses@ms.uky.edu], October '95
+% further modified by Charles Danforth [danforth@pha.jhu.edu], January 2000
+% More modifying by John Vernaleo [vernaleo@astro.umd.edu] August 2007
+% More modifying by John Vernaleo [john@netpurgatory.com] May 2008
+% I got the original copy from:
+% http://casa.colorado.edu/~danforth/comp/cardtex.html
 
-\documentclass[11pt]{article}
-\usepackage[dvips]{graphicx}
-%
-%  I personally like the look of the CM fonts, especially compared to
-%  plain old times/helvetica.  Of course, you can select a different
-%  set of fonts here if you like -- Adobe Myriad looks good on a card,
-%  and for mixed serif/sans the Stone family hangs together nicely,
-%  but unfortunately those aren't part of TeX.
-%
-%\usepackage{times}
-%\usepackage{ccfonts}
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{url}
 \usepackage[osf,sf]{engserif} % 5es
-%
-\pagestyle{empty}
-%
-%  Before printing a final copy, you will probably have to tweak these
-%  values to get the cards to properly line up with the cut marks.
-%  Avery provides a sizing overlay with their cards; if you're having
-%  these professionally printed, get the appropriate dimensions from
-%  your printer [and you might need to adjust the multiput commands
-%  below!].
-%
-\setlength{\textwidth}{7in}
-\setlength{\hoffset}{0in}
-\setlength{\voffset}{0in}
-\setlength{\oddsidemargin}{-.8in}
-\setlength{\evensidemargin}{-.8in}
-\setlength{\textheight}{10in}
-\setlength{\topmargin}{-0.87in}
-
-%
-%  Text variables for the card.  If you want to change how these are
-%  rendered, see below.
-%
-%\newcommand{\xname}{\small Mag. (FH) \large Martin W\"urtele}
-%\newcommand{\xdebian}{Debian GNU/Linux}
-%\newcommand{\xdeburl}{http://www.heorot.org}
-\newcommand{\xname}{Eddie McCreary}
-\newcommand{\xtitle}{Developer}
-\newcommand{\xaddress}{16101 Congo Lane}
-\newcommand{\xaddressb}{Houston, TX 77040}
-\newcommand{\xphone}{(281) 851-2417}
-\newcommand{\xemail}{}
-\newcommand{\yemail}{lazarus@heorot.org}
-\newcommand{\xurl}{http://www.heorot.org}
-%
-%  The PGP keys are printed in a tiny little font along the bottom
-%  edge of the card.  If you come up with a better way to fit them in,
-%  let me know.
-%
+\renewcommand{\rmdefault}{5boj}
+%\usepackage[osf,sf]{bergamo} % 5bo
+%%%%%%%%%%%%%%%%%%%%% DEFINE USER SPECIFIC MACROS BELOW %%%%%%%%%%%%%%%%%%%%%
+\def\Who     {Eddie McCreary}
+\def\What    {Software}
+\def\Where   {}
+\def\Address {}
+\def\CityZip {}
+\def\Email   {lazarus@heorot.org}
+\def\TEL     {(281) 851-2417}
+\def\FAX     {}
+\urldef{\WEB}\url{http://www.heorot.org}
+\def\logo    {}
+\def\logosize {2.5in}
 % You can get the fingerprint by doing : 'pgp -kvc <userid>'
 \newcommand{\xpgpkeyidA}{95262F3E}
 \newcommand{\xpgpbitsA}{1024D}
 \newcommand{\xpgpfingerprintA}{4C06 572C 882E 9682 2C23  5FD4 7BEF ECE9 9526 2F3E}
 \newcommand{\xpgpkeyA}{\xpgpbitsA/\xpgpkeyidA: \xpgpfingerprintA}
-
-% There is room for 3 keys, uncomment the bit below and duplicate the above
-
 \newcommand{\pgpfont}{\tt \fontsize{.08in}{.096in}\selectfont}
 
-\newcommand{\xpgpkeyidB}{3E8DCCC0}
-\newcommand{\xpgpbitsB}{1024D}
-\newcommand{\xpgpfingerprintB}{30DC 1D28 1D79 32F5 5E67  3ABB 28EE B35A 3E8D CCC0}
-\newcommand{\xpgpkeyB}{\xpgpbitsB/\xpgpkeyidB: \xpgpfingerprintB}
+%I put all the above info for me and beth in seperate files, but you
+%can just fill in the info above.
+%\include{john}
+%\include{beth}
 
-%
+%\newcommand{\border}{\makebox}  %Use this for no frame
+\newcommand{\border}{\framebox} %Use this for visable border for testing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MARGINS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\unitlength}{1in}%
+\textwidth       8.00in
+\textheight     11.00in
+\itemindent      0.00in
+\parindent       0.00in
+\def\lstart{0.0in}
+
+%%%%%%%%%%%%%%%%%%%%Use this block to line up cards with you paper%%%%%%%%%%
+%Modify this to move whole thing left or right.
+\oddsidemargin   -.31in
+%Modify this to move whole up and down.
+\topmargin      -1.0in
+%This is the size of each card.
+\def\cwidth{3.6}
+\def\cheight{2.1}
+%These are multiples of cheight that are needed for positioning,
+\def\cheighttwo{4.2}
+\def\cheightthree{6.3}
+\def\cheightfour{8.4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Unless your logo is a very different size, you should never need
+%to modify anything below this line.
+
+%%%%%%%%%%%%%%%%%%%%% BUSINESS CARD MACRO [\card] BELOW %%%%%%%%%%%%%%%%%%%%
+\def\card{\begin{tabular}{c}
+
+          \vspace{0.3in}\\
+          \hspace*{\lstart}{\Large\sc \Who}\vspace{0.05in}\\
+          \hspace*{\lstart}{\small\sc \What}\vspace{0.05in}\\
+          \rule[-2ex]{0ex}{2ex}
+
+%          \small%
+          \hspace*{\lstart}{\scriptsize \TEL}\\
+          \hspace*{\lstart}{\it\scriptsize\Email}\\
+          \hspace*{\lstart} {\scriptsize\WEB}\vspace{0.25in}\\
+
+          \hspace*{\lstart}{\textsf{\pgpfont \xpgpkeyA}}
+
+          \end{tabular}}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{empty}
 \begin{document}
-\setlength{\unitlength}{1mm}
-\begin{picture}(178,253)(-7,-1)
-
-  % Vert ticks along the bottom
-  \put(0,-1){\line(0,-1){3}}
-  \put(89,-1){\line(0,-1){3}}
-  \put(179,-1){\line(0,-1){3}}
-
-  % Vert ticks along the top
-  \put(0,255){\line(0,1){3}}
-  \put(89,255){\line(0,1){3}}
-  \put(179,255){\line(0,1){3}}
-
-    \put(-1,-1){\line(-1,0){3}}
-    \put(180,-1){\line(1,0){3}}
-
-  \multiput(0,0)(0,51.0){5}{%
-    % Ticks on the side of each card
-    \put(-1,51){\line(-1,0){3}}
-    \put(180,51){\line(1,0){3}}
-    \multiput(0,0)(89,0){2}{%
-      \begin{picture}(89,51)(0,0)
-	%
-	%  Line across the top of the card.
-	%
-        \put(3,48){\line(1,0){83}}
-	%
-%        \put(13.5,42){\large\textsc{\xdebian}}
-%        \put(13.5,38){\scriptsize\xdeburl}
-
-
-	\put(6,33){\textsf{\sc\large\xname}}
-	\put(6,28){\textsf{\sc\small\xtitle}}
-
-
-	% depending on lenth this needs a little manual tweeking, didn't find
-	% a way to use right alignment within \put(){}
-        \put(58.45,18){\textsf{\it\scriptsize \xemail}}
-        \put(54.65,15){\textsf{\it\scriptsize \yemail}}
-%        \put(45.4,12){\textsf{\scriptsize \xurl}}
-        \put(50,12){\textsf{\it\scriptsize \xurl}}
-	       
-        \put(6,18){\scriptsize \xaddress}
-        \put(6,15){\scriptsize \xaddressb}
-	\put(6,12){\scriptsize \xphone}
-        
-	
-	% For one key [1.2x]
-        \put(6,6){\textsf{\pgpfont \xpgpkeyA}}
-	
-	% For two keys
-        %\put(5,8){\textsf{\pgpfont \xpgpkeyA}}
-        %\put(5,6){\textsf{\pgpfont \xpgpkeyB}}	
-        %\put(5,4){\textsf{\pgpfont \xpgpkeyC}}	% For three keys
-	
-	%  Line across the bottom of the card.
-	%
-        \put(3,3){\line(1,0){83}}
-      \end{picture}}}
+\typeout{card.tex, by Brian Moses, August07 version, jcv}
+\begin{picture}(8.0,11)%
+\multiput(0.0,\cheightfour)(\cwidth,0){2}{\border(\cwidth,\cheight){\card}}
+\multiput(0.0,\cheightthree)(\cwidth,0){2}{\border(\cwidth,\cheight){\card}}
+\multiput(0.0,\cheighttwo)(\cwidth,0){2}{\border(\cwidth,\cheight){\card}}
+\multiput(0.0,\cheight)(\cwidth,0){2}{\border(\cwidth,\cheight){\card}}
+\multiput(0.0,0.0)(\cwidth,0){2}{\border(\cwidth,\cheight){\card}}
 \end{picture}
 \end{document}
-
-% last modified: Thu Nov 21 15:32:23 CET 2002
