@@ -1,0 +1,13 @@
+Bernhard Modern
+    \usepackage[sf]{bernmode} % 5bm
+
+Caslon
+    \usepackage[sf]{caslon} % 5ca
+
+English Serif
+     \usepackage[osf,sf]{engserif} % 5es
+suppport sc,it
+
+Bergamo
+    \usepackage[osf,sf]{bergamo} % 5bo
+
