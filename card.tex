@@ -13,7 +13,7 @@
 \renewcommand{\rmdefault}{5boj}
 %%%%%%%%%%%%%%%%%%%%% DEFINE USER SPECIFIC MACROS BELOW %%%%%%%%%%%%%%%%%%%%%
 \def\Who     {Edward McCreary}
-\def\What    {Software}
+\def\What    {Developer}
 \def\Where   {}
 \def\Address {}
 \def\CityZip {}
@@ -22,8 +22,8 @@
 \def\FAX     {}
 %\urldef{\WEB}\url{http://www.heorot.org}
 \def\WEB {http://www.heorot.org}
-\def\logo    {}
-\def\logosize {2.5in}
+\def\logo    {em_logo.eps}
+\def\logosize {0.3in}
 % You can get the fingerprint by doing : 'pgp -kvc <userid>'
 \newcommand{\xpgpkeyidA}{95262F3E}
 \newcommand{\xpgpbitsA}{1024D}
@@ -36,8 +36,8 @@
 %\include{john}
 %\include{beth}
 
-\newcommand{\border}{\makebox}  %Use this for no frame
-%\newcommand{\border}{\framebox} %Use this for visable border for testing
+%\newcommand{\border}{\makebox}  %Use this for no frame
+\newcommand{\border}{\framebox} %Use this for visable border for testing
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MARGINS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setlength{\unitlength}{1in}%
 \textwidth       8.00in
@@ -65,21 +65,26 @@
 %to modify anything below this line.
 
 %%%%%%%%%%%%%%%%%%%%% BUSINESS CARD MACRO [\card] BELOW %%%%%%%%%%%%%%%%%%%%
-\def\card{\begin{tabular}{c}
+\def\card{
 
-          \vspace{0.3in}\\
-          \hspace*{\lstart}{\large\sc \Who}\vspace{0.05in}\\
-          \hspace*{\lstart}{\small\it \What}\vspace{0.05in}\\
-          \rule[-2ex]{0ex}{2ex}
+\begin{tabular*}{3.5in}{@{\extracolsep{\fill}}lcr}
 
-%          \small%
-          \hspace*{\lstart}{\scriptsize\TEL}\\
-          \hspace*{\lstart}{\scriptsize\Email}\\
-          \hspace*{\lstart}{\scriptsize\WEB}\vspace{0.25in}\\
+\multicolumn{3}{l} { \includegraphics[width=\logosize]{\logo} } \\
 
-          \hspace*{\lstart}{\textsf{\pgpfont \xpgpkeyA}}
+&    \vspace{0.1in} & \\
+&    \hspace*{\lstart}{\large\sc \Who}\vspace{0.05in}&  \\
 
-          \end{tabular}}%
+&    \hspace*{\lstart}{\small\it \What}\vspace{0.05in}&  \\
+%    \rule[-2ex]{0ex}{2ex}
+
+%    \small%
+&    \hspace*{\lstart}{\scriptsize\TEL} &  \\
+&    \hspace*{\lstart}{\scriptsize\Email} &  \\
+&    \hspace*{\lstart}{\scriptsize\WEB}\vspace{0.2in} &  \\
+
+&    \hspace*{\lstart}{\textsf{\pgpfont \xpgpkeyA}} & 
+
+\end{tabular*}}%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagestyle{empty}
