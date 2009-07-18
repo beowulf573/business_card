@@ -38,8 +38,8 @@
 %\include{john}
 %\include{beth}
 
-\newcommand{\border}{\makebox}  %Use this for no frame
-%\newcommand{\border}{\framebox} %Use this for visable border for testing
+%\newcommand{\border}{\makebox}  %Use this for no frame
+\newcommand{\border}{\framebox} %Use this for visable border for testing
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MARGINS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setlength{\unitlength}{1in}%
 \textwidth       8.00in
@@ -69,26 +69,8 @@
 %%%%%%%%%%%%%%%%%%%%% BUSINESS CARD MACRO [\card] BELOW %%%%%%%%%%%%%%%%%%%%
 \def\card{
 
-\begin{tabular*}{3.5in}{@{\extracolsep{\fill}}lcr}
-
-%\multicolumn{3}{l} { \includegraphics[width=\logosize]{\logo} } \\
-
-\multicolumn{3}{l} {  } \\
-
-&    \vspace{0.1in} & \\
-&    \hspace*{\lstart}{\large\sc \Who}\vspace{0.05in}&  \\
-
-&    \hspace*{\lstart}{\small\it \What}\vspace{0.05in}&  \\
-%    \rule[-2ex]{0ex}{2ex}
-
-%    \small%
-&    \hspace*{\lstart}{\scriptsize\TEL} &  \\
-&    \hspace*{\lstart}{\scriptsize\Email} &  \\
-&    \hspace*{\lstart}{\scriptsize\WEB}\vspace{0.2in} &  \\
-
-&    \hspace*{\lstart}{\textsf{\pgpfont \xpgpkeyA}} & 
-
-\end{tabular*}}%
+  \includegraphics[angle=45,width=1.5in]{\logo}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagestyle{empty}
