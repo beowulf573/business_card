@@ -39,7 +39,7 @@
      id="namedview3025"
      showgrid="false"
      inkscape:zoom="3.8262313"
-     inkscape:cx="204.25312"
+     inkscape:cx="106.16421"
      inkscape:cy="59.772732"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -2520,53 +2520,64 @@
    width="77.570877" /><text
    xml:space="preserve"
    style="font-size:18px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Futura;-inkscape-font-specification:Futura Medium"
-   x="16.428207"
+   x="16.934778"
    y="31.674612"
    id="text10832"
    sodipodi:linespacing="125%"><tspan
      sodipodi:role="line"
      id="tspan10834"
-     x="16.428207"
+     x="16.934778"
      y="31.674612">Eddie McCreary</tspan></text>
 
 
 <text
    xml:space="preserve"
    style="font-size:10px;font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Futura;-inkscape-font-specification:Futura Medium Italic"
-   x="17.863754"
-   y="50.557175"
+   x="18.370325"
+   y="45.269402"
    id="text10836"
    sodipodi:linespacing="125%"><tspan
      sodipodi:role="line"
      id="tspan10838"
-     x="17.863754"
-     y="50.557175">software@heorot.org</tspan></text>
+     x="18.370325"
+     y="45.269402">software@heorot.org</tspan></text>
 
 
 <text
    xml:space="preserve"
    style="font-size:10px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Futura;-inkscape-font-specification:Futura Medium"
-   x="17.575668"
-   y="72.589645"
+   x="18.082239"
+   y="62.014084"
    id="text10840"
    sodipodi:linespacing="125%"><tspan
      sodipodi:role="line"
      id="tspan10842"
-     x="17.575668"
-     y="72.589645">713-581-0239</tspan></text>
+     x="18.082239"
+     y="62.014084">(+01) 713-581-0239</tspan></text>
 
 
 
 <text
    xml:space="preserve"
    style="font-size:10px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Futura;-inkscape-font-specification:Futura Medium"
-   x="17.360825"
+   x="17.867395"
    y="92.900925"
    id="text3722"
    sodipodi:linespacing="125%"><tspan
      sodipodi:role="line"
      id="tspan3724"
-     x="17.360825"
+     x="17.867395"
      y="92.900925">http://www.heorot.org</tspan></text>
 
+<text
+   xml:space="preserve"
+   style="font-size:10px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Futura;-inkscape-font-specification:Futura Medium"
+   x="18.033411"
+   y="76.778793"
+   id="text4459"
+   sodipodi:linespacing="125%"><tspan
+     sodipodi:role="line"
+     id="tspan4461"
+     x="18.033411"
+     y="76.778793">Key ID 1024D/95262F3E</tspan></text>
 </g></svg>
